@@ -1,5 +1,5 @@
-import Logo from './../assets/logo.png';
-import Navigation from './Navigation';
+import Logo from './../../assets/logo.png';
+import Navigation from '../navigation/Navigation';
 import './_Header.scss';
 
 const Header = () => {

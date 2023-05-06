@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import Banner from '../components/Banner';
-import Footer from '../components/Footer';
+import Header from '../components/header/Header';
+import Banner from '../components/banner/Banner';
+import Footer from '../components/Footer/Footer';
 import aboutCoverImage from '../assets/about_cover.png';
 import aboutCoverImageMobile from '../assets/about_cover_m.png';
 
@@ -11,7 +11,7 @@ const About = () => {
       <Header />
       <Banner
         image={aboutCoverImage}
-        mobileImage={aboutCoverImageMobile}
+        imageMobile={aboutCoverImageMobile}
         className="about-banner"
       />
       <Footer />
