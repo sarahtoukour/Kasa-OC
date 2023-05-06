@@ -3,7 +3,8 @@
 .header {
   @include flex(row, space-between, center);
   height: 68px;
-  max-width: 95%;
+  width: 86%;
+  max-width: 1240px;
   margin: 0 auto;
   img {
     height: 60%;

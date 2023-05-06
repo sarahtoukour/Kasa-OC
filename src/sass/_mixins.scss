@@ -4,3 +4,11 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin banner {
+  position: relative;
+  width: 86%;
+  max-width: 1240px;
+  height: 223px;
+  margin: 63px auto 43px;
+}
