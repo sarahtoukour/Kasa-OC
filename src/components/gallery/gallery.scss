@@ -1,0 +1,19 @@
+@import '../../sass/index.scss';
+
+.home_gallery {
+  @include flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: $color-tertiary;
+  padding: 50px;
+  border-radius: 25px;
+  width: 86%;
+  margin: 0 auto;
+  @media screen and (max-width: 1296px) {
+    gap: 25px;
+    padding: 25px 15px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+}

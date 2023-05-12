@@ -1,10 +1,10 @@
 @import '../../sass/index.scss';
 
-.home-banner-container {
+.home_banner_container {
   position: relative;
 }
 
-.home-banner {
+.home_banner {
   @include banner;
   @media screen and (max-width: 700px) {
     height: 150px;
@@ -17,19 +17,19 @@
   }
 }
 
-.about-banner {
+.about_banner {
   @include banner;
   @media screen and (max-width: 700px) {
     height: 150px;
   }
   @media screen and (max-width: 460px) {
     height: 223px;
-    width: 90%;
+    width: 86%;
     margin: 17px auto 43px;
   }
 }
 
-.banner__image {
+.banner_image {
   position: absolute;
   object-fit: cover;
   left: 0;
@@ -45,7 +45,7 @@
   }
 }
 
-.titre-banner {
+.banner_title {
   position: absolute;
   top: 40%;
   left: 30px;

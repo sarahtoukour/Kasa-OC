@@ -8,22 +8,22 @@ function detectMobileScreen() {
     return false; // non mobile
   }
 }
-const Banner = (props) => {
-  const { image, imageMobile, className, text } = props;
-  var myImage = '';
+
+const Banner = ({ image, imageMobile, className, text }) => {
+  let myImage = '';
   if (detectMobileScreen() === true && imageMobile) {
     myImage = imageMobile;
   } else {
     myImage = image;
   }
-  console.log(myImage);
-  console.log(imageMobile);
+  // console.log(myImage);
+  // console.log(imageMobile);
 
   return (
-    <div className="home-banner-container">
-      <p className="titre-banner"> {text}</p>
+    <div className="home_banner_container">
+      <p className="banner_title"> {text}</p>
       <div className={`banner ${className}`}>
-        <img src={myImage} alt="Banner" className="banner__image" />
+        <img src={myImage} alt="Banner" className="banner_image" />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Logo from './../../assets/logo.png';
 import Navigation from '../navigation/Navigation';
-import './_Header.scss';
+import './header.scss';
 
 const Header = () => {
   return (
