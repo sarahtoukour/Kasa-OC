@@ -35,7 +35,7 @@ export default function Carousel({ carouselPictures }) {
             alt="show previous"
             onClick={prevPicture}
           />
-          <p className="pictureCount">
+          <p className="count">
             {currentIndex + 1} / {carouselPictures.length}
           </p>
         </>

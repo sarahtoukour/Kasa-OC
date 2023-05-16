@@ -7,7 +7,7 @@ import Carousel from '../../components/carousel/carousel';
 import Footer from '../../components/Footer/Footer';
 import Collapse from '../../components/collapse/Collapse';
 import greyStar from '../../assets/grey_star.png';
-import redStar from '../../assets/red_star.png';
+import redStar from '../../assets/red_star.svg';
 
 export default function Lodging() {
   const { id } = useParams();

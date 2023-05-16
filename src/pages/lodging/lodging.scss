@@ -5,6 +5,7 @@
     @include flex(row, space-between, flex-start);
     color: $color-secondary;
     width: 95%;
+    max-width: 1240px;
     margin: 0 auto;
     @media screen and (max-width: 650px) {
       @include flex(column, space-between, flex-start);
@@ -14,20 +15,24 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      font-weight: 500;
-      font-size: 14px;
+      h1 {
+        font-weight: 500;
+        font-size: clamp(18px, 3vw, 36px);
+      }
+      p {
+        font-weight: 500;
+        font-size: clamp(14px, 3vw, 18px);
+      }
       button {
         display: inline;
         padding: 5px 15px;
         margin-right: 10px;
         cursor: pointer;
+        font-size: clamp(10px, 3vw, 14px);
         border-radius: 10px;
         border: none;
         color: $color-primary;
         background-color: $color-secondary;
-        &:hover {
-          box-shadow: 0 2px 8px rgb(0, 0, 0);
-        }
       }
       div {
         display: flex;
@@ -67,11 +72,11 @@
         display: flex;
         gap: 10px;
         img {
-          width: 30px;
-          height: 30px;
+          width: 24.75px;
+          height: 24px;
           @media screen and (max-width: 650px) {
-            width: 20px;
-            height: 20px;
+            width: 13.41px;
+            height: 13px;
           }
         }
       }

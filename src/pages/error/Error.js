@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import { Link } from 'react-router-dom';
 import './error.scss';
+import Footer from '../../components/Footer/Footer';
 
 const Error = () => {
   return (
@@ -13,10 +14,12 @@ const Error = () => {
           <p className="error_infos_content">
             La page que vous recherchez n'existe pas.
           </p>
+          <Link className="error_infos_return" to="/">
+            Retourner sur la page d'accueil
+          </Link>
         </div>
-        <Link className="error_infos_return" to="/">
-          Retourner sur la page d'accueil
-        </Link>
+
+        <Footer />
       </div>
     </>
   );

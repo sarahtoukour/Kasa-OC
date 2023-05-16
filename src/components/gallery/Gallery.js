@@ -2,7 +2,7 @@ import datas from '../../data/data';
 import Card from '../cards/Card';
 import './gallery.scss';
 
-const Gallery = () => {
+export default function Gallery() {
   return (
     <main className="home_gallery">
       {datas.map((data) => {
@@ -17,6 +17,4 @@ const Gallery = () => {
       })}
     </main>
   );
-};
-
-export default Gallery;
+}

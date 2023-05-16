@@ -23,8 +23,10 @@
     &_return {
       display: block;
       text-align: center;
+      text-decoration: underline;
       font-weight: 500;
       font-size: clamp(12px, 2.5vw, 18px);
+      margin-top: 160px;
     }
   }
 }

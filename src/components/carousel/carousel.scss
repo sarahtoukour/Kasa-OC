@@ -3,16 +3,17 @@
 .carousel {
   position: relative;
   display: flex;
-  width: 100%;
   height: 415px;
   border-radius: 25px;
   background-position: center;
   background-size: cover;
   width: 95%;
-  margin: 43px auto;
+  max-width: 1240px;
+  margin: 43px auto 30px auto;
   @media screen and (max-width: 650px) {
-    height: 200px;
+    height: 255px;
     margin: 20px auto;
+    border-radius: 10px;
   }
   &_arrow {
     position: absolute;
@@ -20,8 +21,10 @@
     height: 15%;
     transform: translateY(-50%);
     cursor: pointer;
-    &:active {
-      transform: translateY(-50%) scale(0.9);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: $color-secondary;
+      border-radius: 5px;
     }
     &_right {
       right: 25px;
@@ -30,13 +33,13 @@
       left: 25px;
     }
   }
-  .pictureCount {
+  .count {
     position: absolute;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    color: $color-primary;
     font-weight: 500;
     font-size: clamp(14px, 2vw, 18px);
+    color: $color-primary;
   }
 }
