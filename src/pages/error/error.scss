@@ -3,7 +3,6 @@
 .error {
   max-width: 95%;
   margin: 0 auto;
-  padding-bottom: 40px;
   color: $color-secondary;
   &_infos {
     @include flex(column, center, center);

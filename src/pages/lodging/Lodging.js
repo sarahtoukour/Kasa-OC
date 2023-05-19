@@ -9,21 +9,36 @@ import Collapse from '../../components/collapse/Collapse';
 import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.svg';
 
+// Composant principal pour afficher les informations détaillées sur un hébergement
 export default function Lodging() {
+  // Récupération de l'ID du paramètre dans l'URL
   const { id } = useParams();
+
+  // Initialisation de la fonction de navigation pour permettre la redirection
   const navigate = useNavigate();
+
+  // Déclaration de l'état pour stocker les informations du logement actuel
   const [currentLodging, setCurrentLodging] = useState(null);
+
+  // Hook d'effet pour récupérer les informations du logement lors du montage du composant
   useEffect(() => {
+    // Recherche du logement correspondant à l'ID dans les données
     const lodging = datas.find((data) => data.id === id);
+
+    // Redirection vers la page d'erreur si aucun logement n'est trouvé
     if (!lodging) {
       navigate('/error');
     } else {
+      // Mise à jour de l'état avec les informations du logement actuel
       setCurrentLodging(lodging);
     }
+    // Dépendances du hook useEffect
   }, [id, navigate]);
 
+  // Si le logement actuel n'est pas chargé, on ne rend rien
   if (!currentLodging) return null;
 
+  // Extraction des informations du logement actuel dans des variables individuelles
   const {
     pictures,
     host,
@@ -34,8 +49,11 @@ export default function Lodging() {
     location,
     tags,
   } = currentLodging;
+
+  // Séparation du prénom et du nom de l'hôte
   const [firstName, lastName] = host.name.split(' ');
 
+  // Rendu du composant
   return (
     <>
       <Header />
@@ -57,7 +75,7 @@ export default function Lodging() {
                 <span>{firstName}</span>
                 <span>{lastName}</span>
               </div>
-              <img src={host.picture} alt="host of this lodging" />
+              <img src={host.picture} alt="hôte de ce logement" />
             </div>
 
             <div className="lodging_content_host_stars">

@@ -23,7 +23,11 @@ const Banner = ({ image, imageMobile, className, text }) => {
     <div className="home_banner_container">
       <p className="banner_title"> {text}</p>
       <div className={`banner ${className}`}>
-        <img src={myImage} alt="Banner" className="banner_image" />
+        <img
+          src={myImage}
+          alt="Paysage d'une côte rocheuse"
+          className="banner_image"
+        />
       </div>
     </div>
   );

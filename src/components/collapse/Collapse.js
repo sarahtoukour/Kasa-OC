@@ -16,7 +16,7 @@ const Collapse = ({ title, content }) => {
         <img
           className={`arrow ${isOpen ? 'arrow_up' : 'arrow_down'}`}
           src={arrow}
-          alt="show content"
+          alt="bouton qui montre le contenu"
         />
       </h3>
       {isOpen && (
