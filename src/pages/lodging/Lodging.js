@@ -6,6 +6,7 @@ import Header from '../../components/header/Header';
 import Carousel from '../../components/carousel/carousel';
 import Footer from '../../components/Footer/Footer';
 import Collapse from '../../components/collapse/Collapse';
+import Tag from '../../components/tag/Tag';
 import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.svg';
 
@@ -65,7 +66,7 @@ export default function Lodging() {
             <p>{location}</p>
             <div>
               {tags.map((tag, index) => {
-                return <button key={index}>{tag}</button>;
+                return <Tag key={index} tag={tag} />;
               })}
             </div>
           </div>
