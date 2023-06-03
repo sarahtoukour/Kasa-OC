@@ -11,7 +11,7 @@ import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.svg';
 
 // Composant principal pour afficher les informations détaillées sur un hébergement
-export default function Lodging() {
+const Lodging = () => {
   // Récupération de l'ID du paramètre dans l'URL
   const { id } = useParams();
 
@@ -40,16 +40,7 @@ export default function Lodging() {
   if (!currentLodging) return null;
 
   // Extraction des informations du logement actuel dans des variables individuelles
-  const {
-    pictures,
-    host,
-    rating,
-    description,
-    equipments,
-    title,
-    location,
-    tags,
-  } = currentLodging;
+  const { pictures, host, rating, description, equipments, title, location, tags } = currentLodging;
 
   // Séparation du prénom et du nom de l'hôte
   const [firstName, lastName] = host.name.split(' ');
@@ -58,18 +49,26 @@ export default function Lodging() {
   return (
     <>
       <Header />
+
+      {/* Le composant Carousel est rendu ici avec des photos passées en tant que props */}
       <Carousel carouselPictures={pictures} />
+
+      {/* Début du contenu principal de la page */}
       <main className="lodging">
         <div className="lodging_content">
           <div className="lodging_content_infos">
             <h1>{title}</h1>
             <p>{location}</p>
+
+            {/* Les tags sont rendus ici. Chaque tag est passé à un composant Tag. */}
             <div>
-              {tags.map((tag, index) => {
-                return <Tag key={index} tag={tag} />;
+              {tags.map((tag) => {
+                return <Tag key={tag} tag={tag} />;
               })}
             </div>
           </div>
+
+          {/* Début des informations de l'hôte */}
           <div className="lodging_content_host">
             <div>
               <div className="lodging_content_host_name">
@@ -79,16 +78,11 @@ export default function Lodging() {
               <img src={host.picture} alt="hôte de ce logement" />
             </div>
 
+            {/* Les étoiles de notation sont rendues ici. Chaque étoile est une image. */}
             <div className="lodging_content_host_stars">
               {[...Array(5)].map((star, index) => {
                 const ratingValue = index + 1;
-                return (
-                  <img
-                    key={index}
-                    src={ratingValue <= rating ? redStar : greyStar}
-                    alt="star"
-                  />
-                );
+                return <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt="star" />;
               })}
             </div>
           </div>
@@ -105,4 +99,6 @@ export default function Lodging() {
       <Footer />
     </>
   );
-}
+};
+
+export default Lodging;

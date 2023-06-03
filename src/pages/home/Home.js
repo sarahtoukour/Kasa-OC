@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/banner/Banner';
-import homeCoverImage from '../../assets/home_cover.png';
+import homeCoverPicture from '../../assets/home_cover.png';
 import Gallery from '../../components/gallery/Gallery';
 
 const Home = () => {
@@ -10,9 +10,10 @@ const Home = () => {
     <div>
       <Header />
       <Banner
-        image={homeCoverImage}
+        picture={homeCoverPicture}
         className="home_banner"
         text="Chez vous, partout et ailleurs"
+        altText="Paysage d'une côte rocheuse"
       />
       <Gallery />
       <Footer />

@@ -4,7 +4,7 @@ import ArrowLeft from '../../assets/chevron_carousel_left.png';
 import { useState } from 'react';
 
 export default function Carousel({ carouselPictures }) {
-  // L'état currentIndex maintient l'index de l'image courante
+  // L'état currentIndex est utilisé pour garder une trace de l'image actuellement affichée dans le carrousel. Il est initialisé à 0, donc le carrousel affiche d'abord la première image de la liste.
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Si aucune image n'est fournie, on ne rend rien
@@ -14,10 +14,12 @@ export default function Carousel({ carouselPictures }) {
   const totalPictures = carouselPictures.length;
 
   const nextPicture = () => {
+    // nextPicture augmente currentIndex de 1, et si currentIndex dépasse la fin de la liste d'images, il retourne à 0 (c'est ce que fait l'opérateur modulo `%`), créant ainsi une boucle.
     setCurrentIndex((currentIndex + 1) % totalPictures);
   };
 
   const prevPicture = () => {
+    // prevPicture diminue currentIndex de 1, et si currentIndex devient négatif, il est ramené à la fin de la liste, créant également une boucle.
     setCurrentIndex((currentIndex - 1 + totalPictures) % totalPictures);
   };
 

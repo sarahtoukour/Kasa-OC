@@ -7,7 +7,8 @@
   background-color: $color-tertiary;
   padding: 50px;
   border-radius: 25px;
-  width: 86%;
+  width: 95%;
+  max-width: 1240px;
   margin: 0 auto;
   @media screen and (max-width: 1296px) {
     gap: 25px;

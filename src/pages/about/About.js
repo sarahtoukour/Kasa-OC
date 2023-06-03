@@ -4,8 +4,8 @@ import Header from '../../components/header/Header';
 import Banner from '../../components/banner/Banner';
 import Collapse from '../../components/collapse/Collapse';
 import Footer from '../../components/Footer/Footer';
-import aboutCoverImage from '../../assets/about_cover.png';
-import aboutCoverImageMobile from '../../assets/about_cover_m.png';
+import aboutCoverPicture from '../../assets/about_cover.png';
+import aboutCoverPictureMobile from '../../assets/about_cover_m.png';
 
 const About = () => {
   const aboutDatas = [
@@ -39,9 +39,10 @@ const About = () => {
     <div>
       <Header />
       <Banner
-        image={aboutCoverImage}
-        imageMobile={aboutCoverImageMobile}
+        picture={aboutCoverPicture}
+        pictureMobile={aboutCoverPictureMobile}
         className="about_banner"
+        altText="Paysage montagneux"
       />
       <main className="about_main">
         {aboutDatas.map((data) => {
